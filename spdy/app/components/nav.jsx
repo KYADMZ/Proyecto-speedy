@@ -11,23 +11,19 @@ export default function NavBar() {
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo and company name */}
         <Link href="/" className="flex items-center -ml-2">
-          <img src="/speedyIcon.jpeg" alt="logo" className="w-14 h-auto" />
-          <span className="ml-2 text-white text-xl font-bold">Speedy</span>
+          <img src="/speedy solo.jpg" alt="logo" className="w-14 h-auto" />
         </Link>
 
         {/* Desktop menu */}
         <div className="hidden md:flex space-x-6">
-          <Link href="/" className="text-gray-200 hover:text-white transition-colors duration-300">
+          <Link href="/" className="text-zinc-400 hover:text-white">
             Home
           </Link>
-          <Link href="/about" className="text-gray-200 hover:text-white transition-colors duration-300">
-            About Us
-          </Link>
-          <Link href="/services" className="text-gray-200 hover:text-white transition-colors duration-300">
+          <Link href="/services" className="text-zinc-400 hover:text-white">
             Services
           </Link>
-          <Link href="/contact" className="text-gray-200 hover:text-white transition-colors duration-300">
-            Contact
+          <Link href="/singin " className="text-zinc-400 hover:text-white">
+            Sing In
           </Link>
         </div>
 
@@ -66,17 +62,14 @@ export default function NavBar() {
       {isOpen && (
         <div className="md:hidden bg-blue-800">
           <div className="px-4 pt-2 pb-4 space-y-1">
-            <Link href="/" className="block text-gray-200 hover:text-white transition-colors duration-300">
+            <Link href="/" className="text-zinc-400 hover:text-white">
               Home
             </Link>
-            <Link href="/about" className="block text-gray-200 hover:text-white transition-colors duration-300">
-              About Us
-            </Link>
-            <Link href="/services" className="block text-gray-200 hover:text-white transition-colors duration-300">
+            <Link href="/services" className="text-zinc-400 hover:text-white">
               Services
             </Link>
-            <Link href="/contact" className="block text-gray-200 hover:text-white transition-colors duration-300">
-              Contact
+            <Link href="/singin" className="text-zinc-400 hover:text-white">
+              Sing In 
             </Link>
           </div>
         </div>
