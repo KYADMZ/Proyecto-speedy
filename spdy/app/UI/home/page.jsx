@@ -26,7 +26,7 @@ export default function home() {
                 </div>
             </section>
 
-            <section>
+            <section className="mb-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-5xl mx-auto">
                     <div className="relative w-full h-60 rounded-lg overflow-hidden shadow-lg group">
                         <img src="foodT.jpg" alt="Imagen 2" className="w-full h-full object-cover" />
