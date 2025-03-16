@@ -1,14 +1,19 @@
+import Slider from "@/app/components/slider";
+
 
 export default function home() {
     return (
         <div className="">
+            
             {/*Martin and Karen container*/}
-            <div>
-                <h1>TEST</h1>
+            <div className="bg-white/30 backdrop-blur-md text-center rounded-3xl mx-4 md:mx-auto border border-blue-950/3 shadow-lg">
+                
+                <Slider></Slider>
+                
             </div>
 
             {/*Jesus sections*/}
-            <section className="py-12 bg-white/30 backdrop-blur-md text-center rounded-3xl mx-4 md:mx-auto max-w-5xl border border-blue-950/3 shadow-lg mb-12">
+            <section className="mt-5 py-12 bg-white/30 backdrop-blur-md text-center rounded-3xl mx-4 md:mx-auto max-w-5xl border border-blue-950/3 shadow-lg mb-7">
                 <div className="max-w-5xl mx-auto grid gap-6 items-center">
                     <div className="text-center">
                         <h3 className="text-7xl text-black font-serif">About Us</h3>
@@ -21,9 +26,8 @@ export default function home() {
                 </div>
             </section>
 
-            <section >
+            <section>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-5xl mx-auto">
-
                     <div className="relative w-full h-60 rounded-lg overflow-hidden shadow-lg group">
                         <img src="foodT.jpg" alt="Imagen 2" className="w-full h-full object-cover" />
                         <div className="absolute inset-0 bg-gray-900 bg-opacity-70 flex flex-col items-center justify-center text-white p-4 opacity-0 group-hover:opacity-90 transition-opacity duration-300">
@@ -31,7 +35,6 @@ export default function home() {
                             <p className="text-sm mt-2">Esta es la información que aparece al pasar el cursor.</p>
                         </div>
                     </div>
-
 
                     <div className="relative w-full h-60 rounded-lg overflow-hidden shadow-lg group">
                         <img src="foodT.jpg" alt="Imagen 2" className="w-full h-full object-cover" />

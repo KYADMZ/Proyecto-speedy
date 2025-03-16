@@ -1,4 +1,4 @@
-"use client"; // Asegura que el código se ejecute en el cliente
+/*"use client"; // Asegura que el código se ejecute en el cliente
 
 import { useState } from "react";
 import Image from "next/image";
@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        {/* Contenedor de la imagen con efecto hover */}
+       
         <div className="relative group w-[200px] h-[228px]">
   <Image
     className="w-full h-full transition-transform duration-300 ease-in-out transform group-hover:scale-250"
@@ -60,3 +60,4 @@ export default function Home() {
     </div>
   );
 }
+*/
