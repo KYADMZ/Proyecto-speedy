@@ -5,7 +5,7 @@ import FOOTER from "./components/footer"
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="">
+      <body className="bg-gray-100">
         <NAV />
         {children}
         <FOOTER />
