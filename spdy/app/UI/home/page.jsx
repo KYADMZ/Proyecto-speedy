@@ -20,7 +20,7 @@ export default function home() {
             <p className="mt-4 text-gray-800 max-w-md mx-auto mb-5 text-lg">
                 At <span className="text-[#0077af] font-semibold">Speedy Couriers LLC</span>, we specialize in <span className="font-semibold">reliable and efficient</span> delivery services for all your needs. Whether it’s food, medical equipment, pharmaceuticals,
                 warehouse goods, packages, or documents, we ensure <span className="font-semibold">fast and secure</span> shipping.  
-                Our mission is to connect businesses and individuals with seamless logistics solutions, backed by a dedicated team and cutting-edge technology.  
+                Our mission is to connect businesses and individuals with <span className="font-semibold">seamless logistics solutions</span>, backed by a dedicated team and cutting-edge technology.  
                 We value speed, safety, and customer satisfaction in every delivery.  
                 Looking for a trusted shipping partner? Or a dynamic career in logistics? <span className="font-semibold">Join us</span> and be part of a company that keeps the world moving.
             </p>
