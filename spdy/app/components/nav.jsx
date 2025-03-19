@@ -47,7 +47,7 @@ export default function NavBar() {
           <div className="hidden md:flex space-x-6">
             {["Home", "About Us", "Services", "Contact"].map((item, index) => (
               <Link key={index} href={`/${item.toLowerCase().replace(" ", "")}`} 
-                className="text-gray-200 border border-blue-300 px-3 py-1 rounded-md hover:text-white hover:border-white transition-colors duration-300"
+                className="text-zinc-400 border border-blue-300 px-3 py-1 rounded-md hover:text-white hover:border-white transition-colors duration-300"
               >
                 {item}
               </Link>
