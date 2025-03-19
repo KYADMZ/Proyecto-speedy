@@ -6,7 +6,7 @@ const images = [
   { src: "/medical.jpg", description: "Medical Equipment" },
   { src: "/pharmacy.jpg", description: "Pharmacy Supplies" },
   { src: "/package.jpg", description: "Package Deliveries" },
-  { src: "/documents.jpg", description: "Legal Documents Delivery" },
+  { src: "/legal.jpg", description: "Legal Documents Delivery" },
   { src: "/warehouse.jpeg", description: "Warehouse Deliveries" }
 ];
 
