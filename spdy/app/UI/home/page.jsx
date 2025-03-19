@@ -1,3 +1,4 @@
+import ScrollEffect from "@/app/components/scroll";
 import Slider from "@/app/components/slider";
 
 // Componente para cada Card
@@ -66,7 +67,7 @@ export default function Home() {
       <div className="bg-white/50 backdrop-blur-lg text-center rounded-3xl mx-4 md:mx-auto shadow-xl mb-10">
         <Slider />
       </div>
-
+      <ScrollEffect>
       {/* Divisor azul elegante */}
       <div className="my-8 mx-auto h-[3px] w-full max-w-5xl bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800 rounded-full"></div>
 
@@ -103,12 +104,15 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      </ScrollEffect>
+      <ScrollEffect>
       {/* Divisor azul elegante */}
       <div className="my-8 mx-auto h-[3px] w-full max-w-5xl bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800 rounded-full"></div>
 
       {/* Sección de tarjetas */}
       <CardsSection />
+      </ScrollEffect>
     </div>
+    
   );
 }
