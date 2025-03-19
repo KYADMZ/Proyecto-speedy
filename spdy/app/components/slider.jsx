@@ -6,7 +6,7 @@ const images = [
   { src: "/medical.jpg", description: "Medical Equipment" },
   { src: "/pharmacy.jpg", description: "Pharmacy Supplies" },
   { src: "/package.jpg", description: "Package Deliveries" },
-  { src: "/legal.jpg", description: "Legal Documents Delivery" },
+  { src: "/documents.jpg", description: "Legal Documents Delivery" },
   { src: "/warehouse.jpeg", description: "Warehouse Deliveries" }
 ];
 
@@ -40,70 +40,74 @@ export default function Slider() {
 
   return (
     <div className="relative w-full h-[100vh] mx-auto overflow-hidden">
+  <div
+    className="flex transition-transform duration-700 ease-in-out"
+    style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+  >
+    {images.map((img, index) => (
       <div
-        className="flex transition-transform duration-700 ease-in-out"
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        key={index}
+        className="relative w-full h-full flex-shrink-0"
+        onMouseEnter={() => setHoveredIndex(index)}
+        onMouseLeave={() => setHoveredIndex(null)}
       >
-        {images.map((img, index) => (
-          <div
-            key={index}
-            className="relative w-full h-full flex-shrink-0"
-            onMouseEnter={() => setHoveredIndex(index)} // Set hovered image
-            onMouseLeave={() => setHoveredIndex(null)} // Reset hovered image
-          >
-            <img
-              src={img.src}
-              alt={`Slide ${index + 1}`}
-              className="w-full h-full object-cover"
-            />
-            <div
-              className={`absolute inset-0 bg-black transition-opacity duration-300 ${
-                hoveredIndex === index ? "opacity-40" : "opacity-0"
-              }`}
-            />
-            <div
-              className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-lg sm:text-2xl font-bold transition-opacity duration-300 ${
-                hoveredIndex === index ? "opacity-100" : "opacity-0"
-              }`}
-            >
-              {img.description}
-            </div>
-          </div>
-        ))}
+        {/* Imagen del slider */}
+        <img
+          src={img.src}
+          alt={`Slide ${index + 1}`}
+          className="w-full h-full object-cover object-center"
+        />
+
+        {/* Capa de opacidad al pasar el mouse */}
+        <div
+          className={`absolute inset-0 bg-black transition-opacity duration-300 ${
+            hoveredIndex === index ? "opacity-40" : "opacity-0"
+          }`}
+        />
+
+        {/* Texto centrado */}
+        <div
+          className={`absolute inset-0 flex items-center justify-center text-white text-lg sm:text-2xl font-bold transition-opacity duration-300 ${
+            hoveredIndex === index ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          {img.description}
+        </div>
       </div>
+    ))}
+  </div>
 
-      {/* Botón Anterior */}
+  {/* Botón Anterior */}
+  <button
+    onClick={() =>
+      handleManualChange((currentIndex - 1 + images.length) % images.length)
+    }
+    className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800/70 hover:bg-gray-900 text-white p-3 rounded-full text-lg sm:text-xl"
+  >
+    &#10094;
+  </button>
+
+  {/* Botón Siguiente */}
+  <button
+    onClick={() => handleManualChange((currentIndex + 1) % images.length)}
+    className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800/70 hover:bg-gray-900 text-white p-3 rounded-full text-lg sm:text-xl"
+  >
+    &#10095;
+  </button>
+
+  {/* Indicadores de progreso */}
+  <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex gap-2">
+    {images.map((_, index) => (
       <button
-        onClick={() =>
-          handleManualChange((currentIndex - 1 + images.length) % images.length)
-        }
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full text-lg sm:text-xl"
-      >
-        &#10094;
-      </button>
+        key={index}
+        className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full transition-all ${
+          currentIndex === index ? "bg-black scale-110" : "bg-gray-300"
+        }`}
+        onClick={() => handleManualChange(index)}
+      />
+    ))}
+  </div>
+</div>
 
-      {/* Botón Siguiente */}
-      <button
-        onClick={() =>
-          handleManualChange((currentIndex + 1) % images.length)
-        }
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full text-lg sm:text-xl"
-      >
-        &#10095;
-      </button>
-
-      {/* Indicadores de progreso */}
-      <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex gap-2">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full ${
-              currentIndex === index ? "bg-black" : "bg-gray-300"
-            }`}
-            onClick={() => handleManualChange(index)}
-          />
-        ))}
-      </div>
-    </div>
   );
 }

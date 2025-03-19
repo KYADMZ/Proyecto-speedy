@@ -16,20 +16,21 @@ export default function NavBar() {
         </Link>
 
         {/* Desktop menu */}
-        <div className="hidden md:flex space-x-6">
-          <Link href="/" className="text-gray-200 hover:text-white transition-colors duration-300">
-            Home
-          </Link>
-          <Link href="/about" className="text-gray-200 hover:text-white transition-colors duration-300">
-            About Us
-          </Link>
-          <Link href="/services" className="text-gray-200 hover:text-white transition-colors duration-300">
-            Services
-          </Link>
-          <Link href="/contact" className="text-gray-200 hover:text-white transition-colors duration-300">
-            Contact
-          </Link>
-        </div>
+<div className="hidden md:flex space-x-6">
+  <Link href="/" className="text-gray-200 border border-blue-300 px-3 py-1 rounded-md hover:text-white hover:border-white transition-colors duration-300">
+    Home
+  </Link>
+  <Link href="/about" className="text-gray-200 border border-blue-300 px-3 py-1 rounded-md hover:text-white hover:border-white transition-colors duration-300">
+    About Us
+  </Link>
+  <Link href="/services" className="text-gray-200 border border-blue-300 px-3 py-1 rounded-md hover:text-white hover:border-white transition-colors duration-300">
+    Services
+  </Link>
+  <Link href="/contact" className="text-gray-200 border border-blue-300 px-3 py-1 rounded-md hover:text-white hover:border-white transition-colors duration-300">
+    Contact
+  </Link>
+</div>
+
 
         {/* Mobile menu button */}
         <button
@@ -63,24 +64,25 @@ export default function NavBar() {
       </div>
 
       {/* Mobile menu */}
-      {isOpen && (
-        <div className="md:hidden bg-blue-800">
-          <div className="px-4 pt-2 pb-4 space-y-1">
-            <Link href="/" className="block text-gray-200 hover:text-white transition-colors duration-300">
-              Home
-            </Link>
-            <Link href="/about" className="block text-gray-200 hover:text-white transition-colors duration-300">
-              About Us
-            </Link>
-            <Link href="/services" className="block text-gray-200 hover:text-white transition-colors duration-300">
-              Services
-            </Link>
-            <Link href="/contact" className="block text-gray-200 hover:text-white transition-colors duration-300">
-              Contact
-            </Link>
-          </div>
-        </div>
-      )}
+{isOpen && (
+  <div className="md:hidden bg-blue-800">
+    <div className="px-4 pt-2 pb-4 space-y-2">
+      <Link href="/" className="block text-gray-200 border border-blue-300 px-3 py-1 rounded-md hover:text-white hover:border-white transition-colors duration-300">
+        Home
+      </Link>
+      <Link href="/about" className="block text-gray-200 border border-blue-300 px-3 py-1 rounded-md hover:text-white hover:border-white transition-colors duration-300">
+        About Us
+      </Link>
+      <Link href="/services" className="block text-gray-200 border border-blue-300 px-3 py-1 rounded-md hover:text-white hover:border-white transition-colors duration-300">
+        Services
+      </Link>
+      <Link href="/contact" className="block text-gray-200 border border-blue-300 px-3 py-1 rounded-md hover:text-white hover:border-white transition-colors duration-300">
+        Contact
+      </Link>
+    </div>
+  </div>
+)}
+
     </nav>
   );
 }
