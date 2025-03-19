@@ -1,9 +1,10 @@
+import ScrollEffect from "@/app/components/scroll";
 import Slider from "@/app/components/slider";
 
 export default function home() {
     return (
         <div>
-
+            
             {/* Martin and Karen container */}
             <div className="bg-white/50 backdrop-blur-lg text-center rounded-3xl mx-4 md:mx-auto shadow-xl mb-10">
                 <Slider />
@@ -13,7 +14,7 @@ export default function home() {
             <div className="my-8 mx-auto h-[3px] w-full max-w-5xl bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800 rounded-full"></div>
 
             {/* Jesus sections */}
-            <section className="py-12 bg-white backdrop-blur-lg text-center rounded-3xl mx-4 md:mx-auto max-w-5xl border border-blue-700/50 shadow-2xl mb-10">
+        <ScrollEffect><section className="py-12 bg-white backdrop-blur-lg text-center rounded-3xl mx-4 md:mx-auto max-w-5xl border border-blue-700/50 shadow-2xl mb-10">
     <div className="max-w-5xl mx-auto grid gap-6 items-center">
         <div className="text-center">
             <h3 className="text-6xl text-black font-serif font-bold">About Us</h3>
@@ -29,7 +30,8 @@ export default function home() {
         </div>
     </div>
 </section>
-
+</ScrollEffect>
+ <ScrollEffect>
 
             {/* Divisor azul elegante */}
             <div className="my-8 mx-auto h-[3px] w-full max-w-5xl bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800 rounded-full"></div>
@@ -71,7 +73,7 @@ export default function home() {
                     </div>
                 </div>
             </section>
-
+            </ScrollEffect>
         </div>
     );
 }

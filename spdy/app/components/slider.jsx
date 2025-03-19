@@ -1,5 +1,8 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 const images = [
   { src: "/food.jpg", description: "Gourmet Food Delivery" },
